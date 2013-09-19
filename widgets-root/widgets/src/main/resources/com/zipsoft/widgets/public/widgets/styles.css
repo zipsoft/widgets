@@ -1,0 +1,29 @@
+.v-lazylayout {
+	width: 100%;
+}
+.v-lazylayout .v-lazylayout-margin {
+	margin: 10px;
+}
+.v-lazylayout .v-lazylayout-placeholder {
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	border-bottom: 1px solid #e5e8e8;
+}
+.v-lazylayout .v-lazylayout-placeholder:FIRST-CHILD {	
+}
+.v-lazylayout .v-lazylayout-placeholder-message {
+	font-size: 46px;
+	font-family: Courier New, monospace;
+	font-style: normal;
+	line-height: 46px;
+	color: #deddd3;
+	padding: 0 26px;
+	display: block;
+	background: #fff;
+}
+.v-lazylayout .v-lazy-item {	
+}
+.v-lazylayout .v-lazy-item:FIRST-CHILD {	
+}
