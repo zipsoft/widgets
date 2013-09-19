@@ -1,0 +1,4 @@
+widgets
+=======
+
+Vaadin addon widgets
