@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Vaadin-Package-Version: 1
-Vaadin-Addon: widgets-0.0.1-SNAPSHOT.jar
-Vaadin-License-Title: Apache License 2.0
-Implementation-Vendor: ${project.organization.name}
-Implementation-Title: ZipsoftWidgets Add-on
-Implementation-Version: 0.0.1-SNAPSHOT

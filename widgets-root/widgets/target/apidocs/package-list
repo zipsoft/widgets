@@ -1,4 +1,7 @@
 com.zipsoft.widgets
 com.zipsoft.widgets.client
+com.zipsoft.widgets.client.collapsablepanel
+com.zipsoft.widgets.client.downloadbutton
 com.zipsoft.widgets.client.expandingtextarea
+com.zipsoft.widgets.client.formdisplay
 com.zipsoft.widgets.client.lazylayout

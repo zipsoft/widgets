@@ -6,6 +6,9 @@
 	<inherits name="com.vaadin.DefaultWidgetSet" /> 
 
 	<!-- Widget styles in public -directory -->
-	<stylesheet src="widgets/styles.css"/>
+<!-- 	<stylesheet src="widgets/styles.css"/> -->
+	
+	<source path="client"/>
+	<source path="shared"/>
 
 </module>

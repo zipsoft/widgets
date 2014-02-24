@@ -1,0 +1,2 @@
+# Module com.zipsoft.widgets.demo.DemoWidgetSet
+# RPC service class, partial path of RPC policy file
