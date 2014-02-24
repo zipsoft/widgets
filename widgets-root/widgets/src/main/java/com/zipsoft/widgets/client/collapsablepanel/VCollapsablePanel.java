@@ -402,6 +402,9 @@ public class VCollapsablePanel extends Composite implements HasAnimation,
 
 	public void setMaxCollapsedHeight(int maxCollapsedHeight) {
 		this.maxCollapsedHeight = maxCollapsedHeight;
+		if (!isOpen) {
+			DOM.setStyleAttribute(contentWrapper.getElement(), "maxHeight", maxCollapsedHeight + "px");
+		}
 	}
 
 	
