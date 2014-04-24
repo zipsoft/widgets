@@ -1,24 +1,33 @@
 package com.zipsoft.widgets.demo;
 
 import com.zipsoft.widgets.CollapsablePanel;
+import com.zipsoft.widgets.FocusCssLayout;
+import com.zipsoft.widgets.FocusCssLayout.BlurEvent;
+import com.zipsoft.widgets.FocusCssLayout.BlurEventListener;
+import com.zipsoft.widgets.FocusCssLayout.FocusEvent;
+import com.zipsoft.widgets.FocusCssLayout.FocusEventListener;
 
 import javax.servlet.annotation.WebServlet;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
 @Theme("demo")
 @Title("ZipsoftWidgets Add-on Demo")
 @SuppressWarnings("serial")
-public class DemoUI extends UI
-{
+public class DemoUI extends UI {
+	
+	private static final Log LOG = LogFactory.getLog(DemoUI.class);
 
     @WebServlet(value = "/*", asyncSupported = true)
     @VaadinServletConfiguration(productionMode = false, ui = DemoUI.class, widgetset = "com.zipsoft.widgets.demo.DemoWidgetSet")
@@ -40,13 +49,38 @@ public class DemoUI extends UI
     	
     	CollapsablePanel panel = new CollapsablePanel();
     	panel.setContent(label.getValue());
+    	
+    	Label label2 = new Label("Ovo je unutar FocusCssLayouta");
+    	TextField textField = new TextField();
+    	FocusCssLayout focusCssLayout = new FocusCssLayout();
+    	focusCssLayout.addComponent(label2);
+    	focusCssLayout.addComponent(textField);
+    	focusCssLayout.addFocusEventListener(new FocusEventListener() {
+			
+			@Override
+			public void onFocus(FocusEvent event) {
+				LOG.debug("Focus");
+				
+			}
+		});
+    	
+    	focusCssLayout.addBlurEventListener(new BlurEventListener() {
+			
+			@Override
+			public void onBlur(BlurEvent event) {
+				LOG.debug("Blur");				
+			}
+		});
+    
+    	
 
         // Show it in the middle of the screen
         final VerticalLayout layout = new VerticalLayout();
 //        layout.setStyleName("demoContentLayout");
         layout.setSizeFull();
         layout.addComponent(panel);
-//        layout.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);
+        
+        layout.addComponent(focusCssLayout);
         setContent(layout);
 
     }
