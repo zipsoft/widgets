@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Built-By: marko
-Build-Jdk: 1.7.0_51
+Build-Jdk: 1.7.0_55
 Class-Path: vaadin-server-7.1.11.jar vaadin-shared-7.1.11.jar vaadin-s
  hared-deps-1.0.2.jar vaadin-theme-compiler-7.1.11.jar commons-jexl-2.
  1.1.jar commons-logging-1.1.1.jar cssparser-0.9.5.jar commons-cli-1.2
