@@ -1,11 +1,6 @@
 package com.zipsoft.widgets.demo;
 
 import com.zipsoft.widgets.CollapsablePanel;
-import com.zipsoft.widgets.FocusCssLayout;
-import com.zipsoft.widgets.FocusCssLayout.BlurEvent;
-import com.zipsoft.widgets.FocusCssLayout.BlurEventListener;
-import com.zipsoft.widgets.FocusCssLayout.FocusEvent;
-import com.zipsoft.widgets.FocusCssLayout.FocusEventListener;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -17,6 +12,7 @@ import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
@@ -50,28 +46,30 @@ public class DemoUI extends UI {
     	CollapsablePanel panel = new CollapsablePanel();
     	panel.setContent(label.getValue());
     	
-    	Label label2 = new Label("Ovo je unutar FocusCssLayouta");
-    	TextField textField = new TextField();
-    	FocusCssLayout focusCssLayout = new FocusCssLayout();
-    	focusCssLayout.addComponent(label2);
-    	focusCssLayout.addComponent(textField);
-    	focusCssLayout.addFocusEventListener(new FocusEventListener() {
-			
-			@Override
-			public void onFocus(FocusEvent event) {
-				LOG.debug("Focus");
-				
-			}
-		});
+//    	Label label2 = new Label("Ovo je unutar FocusCssLayouta");
+//    	TextField textField = new TextField();
+//    	FocusCssLayout focusCssLayout = new FocusCssLayout();
+//    	focusCssLayout.addComponent(label2);
+//    	focusCssLayout.addComponent(textField);
+//    	focusCssLayout.addFocusEventListener(new FocusEventListener() {
+//			
+//			@Override
+//			public void onFocus(FocusEvent event) {
+//				LOG.debug("Focus");
+//				
+//			}
+//		});
     	
-    	focusCssLayout.addBlurEventListener(new BlurEventListener() {
-			
-			@Override
-			public void onBlur(BlurEvent event) {
-				LOG.debug("Blur");				
-			}
-		});
+//    	focusCssLayout.addBlurEventListener(new BlurEventListener() {
+//			
+//			@Override
+//			public void onBlur(BlurEvent event) {
+//				LOG.debug("Blur");				
+//			}
+//		});
     
+    	
+
     	
 
         // Show it in the middle of the screen
@@ -80,7 +78,10 @@ public class DemoUI extends UI {
         layout.setSizeFull();
         layout.addComponent(panel);
         
-        layout.addComponent(focusCssLayout);
+        
+        
+        
+        
         setContent(layout);
 
     }

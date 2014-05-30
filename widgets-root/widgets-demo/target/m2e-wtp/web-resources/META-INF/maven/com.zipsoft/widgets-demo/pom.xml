@@ -10,28 +10,16 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.1.11</vaadin.version>
+		<vaadin.version>7.2.0</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 	</properties>
 
-    <!--     
-	<organization>
-		<name>My Name</name>
-		<url>https://github.com/mygithubaccount/ZipsoftWidgets/</url>
-	</organization>
-    
-	<scm>
-		<url>git://github.com/mygithubaccount/ZipsoftWidgets.git</url>
-		<connection>scm:git:git://github.com/mygithubaccount/ZipsoftWidgets.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${ComponentClassName}.git</developerConnection>
-		<tag>ZipsoftWidgets add-on for Vaadin</tag>
-	</scm>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/mygithubaccount/ZipsoftWidgets/issues</url>
-	</issueManagement>
-    -->
+	<!-- <organization> <name>My Name</name> <url>https://github.com/mygithubaccount/ZipsoftWidgets/</url> 
+		</organization> <scm> <url>git://github.com/mygithubaccount/ZipsoftWidgets.git</url> 
+		<connection>scm:git:git://github.com/mygithubaccount/ZipsoftWidgets.git</connection> 
+		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${ComponentClassName}.git</developerConnection> 
+		<tag>ZipsoftWidgets add-on for Vaadin</tag> </scm> <issueManagement> <system>GitHub</system> 
+		<url>https://github.com/mygithubaccount/ZipsoftWidgets/issues</url> </issueManagement> -->
 
 	<licenses>
 		<license>
@@ -77,9 +65,14 @@
 			<artifactId>widgets</artifactId>
 			<version>${version}</version>
 		</dependency>
-		<dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.vaadin</groupId> -->
+<!-- 			<artifactId>vaadin-push</artifactId> -->
+<!-- 			<version>${vaadin.version}</version> -->
+<!-- 		</dependency> -->
+	<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-push</artifactId>
+			<artifactId>vaadin-server</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
@@ -98,6 +91,16 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.google.guava</groupId> -->
+<!-- 			<artifactId>guava</artifactId> -->
+<!-- 			<version>17.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.google.guava</groupId> -->
+<!-- 			<artifactId>guava-gwt</artifactId> -->
+<!-- 			<version>17.0</version> -->
+<!-- 		</dependency> -->
 	</dependencies>
 
 	<build>
@@ -131,10 +134,10 @@
 			</plugin>
 
 			<plugin>
-		        <artifactId>maven-war-plugin</artifactId>
-		        <version>2.3</version>
-		        <configuration>
-		        	<packagingExcludes>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<packagingExcludes>
 						**/VAADIN/gwt-unitCache/**,
 						**/VAADIN/widgetsets/WEB-INF/**,
 						**/WEB-INF/lib/servlet-api-*.jar,
@@ -146,7 +149,7 @@
 						**/WEB-INF/classes/widgetsets/**
 					</packagingExcludes>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-		        </configuration>
+				</configuration>
 			</plugin>
 
 			<plugin>
@@ -190,10 +193,11 @@
 			</plugin>
 
 		</plugins>
-	
+
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

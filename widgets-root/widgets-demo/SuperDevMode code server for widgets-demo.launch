@@ -4,6 +4,8 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/widgets-demo"/>
 </listAttribute>
