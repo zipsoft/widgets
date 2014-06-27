@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>com.zipsoft</groupId>
 			<artifactId>widgets</artifactId>
-			<version>${version}</version>
+			<version>0.0.1</version>
 		</dependency>
 <!-- 		<dependency> -->
 <!-- 			<groupId>com.vaadin</groupId> -->

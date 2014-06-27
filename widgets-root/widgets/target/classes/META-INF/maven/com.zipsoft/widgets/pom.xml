@@ -5,7 +5,7 @@
 	<groupId>com.zipsoft</groupId>
 	<artifactId>widgets</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>ZipsoftWidgets Add-on</name>
 
 	<properties>
